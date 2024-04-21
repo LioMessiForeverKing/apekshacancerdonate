@@ -1,6 +1,21 @@
+"use client";
+import gsap from "gsap";
+import {useGSAP} from "@gsap/react";
+import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+import { useRef } from "react";
+
 export default function StarGrid() {
+  const prefersReducedMotion =usePrefersReducedMotion();
+    const container = useRef(null)
+    gsap.registerPlugin(useGSAP);
+
+
   const grid = [14, 30] as const;
   const spacing = 40; // Adjust spacing between hearts
+
+  useGSAP(() => {
+
+  })
 
   return (
     <svg
